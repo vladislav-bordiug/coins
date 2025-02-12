@@ -1,0 +1,4 @@
+POST http://localhost:8080/api/sendCoin
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzk0ODM2MjMsImlhdCI6MTczOTM5NzIyMywidXNlcm5hbWUiOiJ5b3VyX3VzZXJuYW1lMyIsInVzZXJfaWQiOjR9.IdKRGt8_dyjuGEPGNyGk06sAb-uyY1uM3LqHCVRQThwawjknVyi1JijY0pUzCVIle0k-Q6jWaJPHWmq21oVRMA
+Content-Type: application/json
+@D:\avitotest\vegetatests\send\sendinfo.json

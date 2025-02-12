@@ -1,0 +1,2 @@
+GET http://localhost:8080/api/buy/socks
+Authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3Mzk0ODMwNTIsImlhdCI6MTczOTM5NjY1MiwidXNlcm5hbWUiOiJ5b3VyX3VzZXJuYW1lMiIsInVzZXJfaWQiOjN9.sptfPX1DWSsKEREBNb3HFg7k2prOWCMdpFkuxwnwB1f-noyZIEZpZd8d2ZQzVUjT2dmCb5KK0iO8C_FKN-VfWA

@@ -1,0 +1,3 @@
+POST http://localhost:8080/api/auth
+Content-Type: application/json
+@D:\avitotest\vegetatests\auth\authinfo.json
