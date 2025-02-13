@@ -47,7 +47,7 @@ func (db *PGXDatabase) SelectIDPassHashQuery(ctx context.Context, username strin
 func (db *PGXDatabase) InsertUserQuery(ctx context.Context, username, passhash string) (int, error) {
 	var userID int
 	err := db.pool.QueryRow(ctx,
-		"INSERT INTO users (username, password, coins) VALUES ($1, $2, 300) RETURNING id",
+		"INSERT INTO users (username, password, coins) VALUES ($1, $2, 1000) RETURNING id",
 		username, passhash).Scan(&userID)
 
 	return userID, err
