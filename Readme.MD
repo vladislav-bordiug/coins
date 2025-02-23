@@ -34,7 +34,7 @@
 
 Было выполнено нагрузочное тестирование, используя Vegeta и такие команды:
 
-```vegeta attack -duration=5s -rate=10 -targets=D:\avitotest\vegetatests\auth\authtest.list -output=results.bin```
+```vegeta attack -duration=5s -rate=100 -targets=D:\avitotest\vegetatests\auth\authtest.list -output=results.bin```
 
 ```vegeta plot -title=AttackResults results > results.html```
 
