@@ -68,8 +68,8 @@ func TestE2E_Info_Success(t *testing.T) {
 		t.Fatalf("Ошибка декодирования ответа /api/info: %v", err)
 	}
 
-	if infoResp.Coins != 300 {
-		t.Errorf("Ожидалось 300 монет, получено %d", infoResp.Coins)
+	if infoResp.Coins != 1000 {
+		t.Errorf("Ожидалось 1000 монет, получено %d", infoResp.Coins)
 	}
 
 	if len(infoResp.Inventory) != 0 {
