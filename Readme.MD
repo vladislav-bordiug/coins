@@ -1,46 +1,46 @@
-# Как запустить
+# How to Run
 
-Перейти в корень проекта и выполнить:
+Navigate to the root of the project and execute:
 
 ```docker-compose up```
 
-# Стек
+# Stack
 
-Для выполнения использовался следующий стек:
+The following stack was used:
 + Go
 + PostgreSQL
 + Docker Compose
 
-Пароль пользователя хранится в базе данных в виде bcrypt-хэша.
+The user's password is stored in the database as a bcrypt hash.
 
-Для подписи JWT токена используется SHA512 с HMAC, секрет хранится как переменная окружения SECRET.
+JWT tokens are signed using SHA512 with HMAC, and the secret is stored as an environment variable named SECRET.
 
-# Тесты и покрытие
+# Tests and Coverage
 
-Написаны e2e тесты для всех 4 сценариев.
-Покрытие 80%+ у unit-тестов. e2e тесты в [e2e](e2e). 
+e2e tests have been written for all 4 scenarios.
+Unit tests have over 80% coverage. e2e tests can be found in the [e2e](e2e) directory. 
 
 ![img.png](img/img.png)
 
-# Линтер
+# Linter
 
-Линтер описан в [.golangci.yml](./.golangci.yml)
+The linter configuration is described in [.golangci.yml](./.golangci.yml)
 
-Все успешно выполняется, ошибок нету (все были исправлены):
+Everything runs successfully with no errors (all issues have been fixed):
 
 ![img.png](img/img_1.png)
 
-# Нагрузочное тестирование
+# Load Testing
 
-Было выполнено нагрузочное тестирование, используя Vegeta и такие команды:
+Load testing was performed using Vegeta with the following commands:
 
 ```vegeta attack -duration=5s -rate=100 -targets=D:\avitotest\vegetatests\auth\authtest.list -output=results.bin```
 
 ```vegeta plot -title=AttackResults results > results.html```
 
-Файлы для тестирования и результаты в [vegetatests](vegetatests).
+The test files and results are available in the [vegetatests](vegetatests) directory.
 
-Контейнеры были развернуты с Docker Desktop.
+The containers were deployed using Docker Desktop.
 
 /api/auth:
 
@@ -50,10 +50,10 @@
 
 ![vegeta-plot.png](img/vegeta-plot1.png)
 
-/api/sendCoin (ошибки связаны с недостаточным кол-вом монет для отправки):
+/api/sendCoin (errors are due to insufficient coins for sending):
 
 ![vegeta-plot.png](img/vegeta-plot2.png)
 
-/api/buy/{item} (ошибки связаны с недостаточным кол-вом монет для покупки):
+/api/buy/{item} (errors are due to insufficient coins for purchase):
 
 ![vegeta-plot.png](img/vegeta-plot3.png)
